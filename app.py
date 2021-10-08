@@ -37,7 +37,7 @@ str_enddate = selected_date[1].strftime(
 
 """
 # 東京都COVID-19関連データ
-### 感染者数
+### 感染者数 
 """
 
 df_selected = df_covid.query(
@@ -84,7 +84,7 @@ fig = plt.figure()
 ax = fig.add_subplot(111)
 ax.plot(x, y_count)
 
-wac_shown = st.sidebar.checkbox('一週間ごとの平均感染者数')
+wac_shown = st.sidebar.checkbox('一週間ごとの平均感染者数表示')
 if wac_shown:
     y_weekly_average_count = df_selected['weekly_average_count'].values
     ax.plot(x, y_weekly_average_count)
